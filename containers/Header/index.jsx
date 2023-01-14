@@ -8,7 +8,7 @@ import { Div } from 'components/Div';
 import { Nav } from 'components/Nav';
 import { Span } from 'components/Paragraph';
 import { menu } from 'static/data/menu';
-import { MenuItem } from 'components/MenuItem';
+// import { MenuItem } from 'components/MenuItem';
 import { Logo } from 'components/Logo';
 import { scrollToTop } from 'utils/common';
 import { useRouter } from 'next/router';
