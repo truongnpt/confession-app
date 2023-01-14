@@ -24,9 +24,6 @@ const HomePage = () => {
     }
   }
 
-  useEffect(() => {
-    console.log('component:', component)
-  }, [component])
   return (
     <StyledHomePage>
       {renderComponent()}
