@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 61.2 (101010) - https://sketch.com -->
+    <title>9B747497-55E4-4461-8138-A46BF97EABEC</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Faba" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="component-UI-1" transform="translate(-335.000000, -513.000000)">
+            <g id="loading" transform="translate(210.000000, 497.000000)">
+                <g transform="translate(123.000000, 14.000000)">
+                    <g id="Loading" transform="translate(2.000000, 2.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <circle id="Oval" opacity="0.699999988" cx="2.56338028" cy="9.83501006" r="1.38631791"></circle>
+                        <circle id="Oval" opacity="0.400000006" cx="11.4828974" cy="8.78873239" r="1.20321932"></circle>
+                        <circle id="Oval" opacity="0.200000003" cx="10.3843058" cy="2.92957746" r="1"></circle>
+                        <ellipse id="Oval" opacity="0.800000012" cx="1.47119718" cy="6.4020161" rx="1.47119718" ry="1.43533602"></ellipse>
+                        <ellipse id="Oval" opacity="0.600000024" cx="5.69753119" cy="11.6967304" rx="1.33745674" ry="1.30326962"></ellipse>
+                        <ellipse id="Oval" opacity="0.5" cx="9.13476258" cy="11.1918491" rx="1.27057344" ry="1.23714487"></ellipse>
+                        <ellipse id="Oval" opacity="0.900000036" cx="3.06276861" cy="3.00265996" rx="1.53805433" ry="1.50132998"></ellipse>
+                        <ellipse id="Oval" opacity="0.300000012" cx="11.863167" cy="5.66237626" rx="1.136833" ry="1.1157505"></ellipse>
+                        <circle id="Oval" cx="6.87927565" cy="1.62173038" r="1.62173038"></circle>
+                    </g>
+                    <rect id="Rectangle" x="0" y="0" width="17" height="17"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,59 @@
+<svg width="470" height="191" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="a" d="M.312.054h43.929v41.951H.312z"/>
+        <path id="e" d="M.312.054h43.929v41.951H.312z"/>
+        <path id="h" d="M262 31h42v41h-42z"/>
+        <path id="i" d="M.312.054h43.929v41.951H.312z"/>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="b">
+            <stop stop-color="#E5E9ED" offset="0%"/>
+            <stop stop-color="#C2C7CE" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="d">
+            <stop stop-color="#E5E9ED" offset="0%"/>
+            <stop stop-color="#C2C7CE" offset="100%"/>
+        </linearGradient>
+        <filter x="-65.5%" y="-50%" width="231%" height="234.1%" filterUnits="objectBoundingBox" id="g">
+            <feOffset dy="7" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.226343969 0" in="shadowBlurOuter1"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" opacity=".653">
+        <g opacity=".6">
+            <g transform="matrix(-1 0 0 1 390 28)">
+                <mask id="c" fill="#fff">
+                    <use xlink:href="#a"/>
+                </mask>
+                <use fill="#F5F5F5" xlink:href="#a"/>
+                <path fill="url(#b)" opacity=".3" mask="url(#c)" d="m-2.143-2.098 48.825 46.203V-2.098z"/>
+            </g>
+            <path stroke="#04A8F5" d="M469.5 96.5h-40v39h40z"/>
+            <path stroke="#04A8F5" opacity=".449" d="M313.5 101.5h-41v40h41z"/>
+            <path fill="url(#d)" opacity=".3" d="M135 96h42v41h-42z" transform="matrix(-1 0 0 1 470 28)"/>
+            <g transform="matrix(-1 0 0 1 232 70)">
+                <mask id="f" fill="#fff">
+                    <use xlink:href="#e"/>
+                </mask>
+                <use fill="#F5F5F5" xlink:href="#e"/>
+                <path fill="url(#b)" opacity=".3" mask="url(#f)" d="m-2.143-2.098 48.825 46.203V-2.098z"/>
+            </g>
+            <path fill="url(#d)" opacity=".3" d="M295 42h42v41h-42z" transform="matrix(-1 0 0 1 470 28)"/>
+            <g transform="matrix(-1 0 0 1 470 28)">
+                <use fill="#000" filter="url(#g)" xlink:href="#h"/>
+                <use fill="#FFF" xlink:href="#h"/>
+            </g>
+        </g>
+        <g transform="matrix(-1 0 0 1 45 0)">
+            <mask id="j" fill="#fff">
+                <use xlink:href="#i"/>
+            </mask>
+            <use fill="#F5F5F5" xlink:href="#i"/>
+            <path fill="url(#b)" opacity=".3" mask="url(#j)" d="m-2.143-2.098 48.825 46.203V-2.098z"/>
+        </g>
+        <path stroke="#04A8F5" d="M79.5 13.5h-44v42h44z"/>
+        <path stroke="#F3F3F5" d="M149.5 66.5h-20v20h20zM97.5 140.5h-20v20h20zM118.5 34.5h-20v20h20z"/>
+        <path fill="#FF9502" d="M55 170H34v21h21z"/>
+        <path stroke="#F3F3F5" d="M93.5 14.5h-4v4h4z"/>
+        <path fill="url(#d)" opacity=".3" d="M53 149h42v41H53z" transform="matrix(-1 0 0 1 150 -83)"/>
+    </g>
+</svg>

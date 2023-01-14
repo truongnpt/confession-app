@@ -1,0 +1,404 @@
+@import './colors.scss';
+@import './sizes.scss';
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin circle($size) {
+  width: $size + px;
+  min-width: $size + px;
+  max-width: $size + px;
+  height: $size + px;
+  min-height: $size + px;
+  max-height: $size + px;
+  border-radius: 50%;
+}
+
+@mixin square($size) {
+  width: $size + px;
+  height: $size + px;
+}
+
+@mixin crop {
+  overflow: hidden;
+}
+
+@mixin hover {
+  cursor: pointer;
+
+  &:hover {
+    background: #cccccc80;
+  }
+}
+
+@mixin hoverText {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@mixin hidden {
+  display: none;
+}
+
+@mixin matchParentSize {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin matchWidth {
+  width: 100%;
+  flex: 1;
+}
+
+@mixin noPadding {
+  padding: 0;
+}
+
+@mixin noMargin {
+  margin: 0;
+}
+
+@mixin noSelect {
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+@mixin m($position, $size) {
+  @if $position == 'r' {
+    margin-right: $size + px;
+  } @else if $position == 'l' {
+    margin-left: $size + px;
+  } @else if $position == 't' {
+    margin-top: $size + px;
+  } @else if $position == 'b' {
+    margin-bottom: $size + px;
+  } @else if $position == 'x' {
+    margin-right: $size + px;
+    margin-left: $size + px;
+  } @else if $position == 'y' {
+    margin-top: $size + px;
+    margin-bottom: $size + px;
+  } @else {
+    margin: $size + px;
+  }
+}
+
+@mixin p($position, $size, $unit:px) {
+  @if $position == 'r' {
+    padding-right: $size + $unit;
+  } @else if $position == 'l' {
+    padding-left: $size + $unit;
+  } @else if $position == 't' {
+    padding-top: $size + $unit;
+  } @else if $position == 'b' {
+    padding-bottom: $size + $unit;
+  } @else if $position == 'x' {
+    padding-right: $size + $unit;
+    padding-left: $size + $unit;
+  } @else if $position == 'y' {
+    padding-top: $size + $unit;
+    padding-bottom: $size + $unit;
+  } @else {
+    padding: $size + $unit;
+  }
+}
+
+@mixin squareCorners {
+  border-radius: 0;
+}
+
+@mixin roundAll {
+  border-radius: 100px;
+}
+
+@mixin roundLeft {
+  @include roundAll;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@mixin roundRight {
+  @include roundAll;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+@mixin borderRadius($position, $size) {
+  @if $position == 'r' {
+      @include borderRadius('tr', $size);
+      @include borderRadius('br', $size);
+  } @else if $position == 'l' {
+      @include borderRadius('tl', $size);
+      @include borderRadius('bl', $size);
+  } @else if $position == 't' {
+      @include borderRadius('tr', $size); 
+      @include borderRadius('tl', $size); 
+  } @else if $position == 'b' {
+      @include borderRadius('br', $size); 
+      @include borderRadius('bl', $size); 
+  } @else if $position == 'tr' {
+      border-top-right-radius: $size;
+  } @else if $position == 'tl' {
+      border-top-left-radius: $size;
+  } @else if $position == 'br' {
+      border-bottom-right-radius: $size;
+  } @else if $position == 'bl' {
+      border-bottom-left-radius: $size;
+  } @else {
+      border-radius: $size;
+  }
+}
+
+@mixin border($position, $size, $type: solid, $color: #e5e5e5) {
+  @if $position == 'r' {
+    border-right: $size + px $type $color;
+  } @else if $position == 'l' {
+    border-left: $size + px $type $color;
+  } @else if $position == 't' {
+    border-top: $size + px $type $color;
+  } @else if $position == 'b' {
+    border-bottom: $size + px $type $color;
+  } @else if $position == 'x' {
+    border-right: $size + px $type $color;
+    border-left: $size + px $type $color;
+  } @else if $position == 'y' {
+    border-top: $size + px $type $color;
+    border-bottom: $size + px $type $color;
+  } @else {
+    border: $size + px $type $color;
+  }
+}
+
+@mixin label {
+  // @include p('y', 5px);
+  @include m('b', 0);
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  z-index: auto;
+}
+
+@mixin noBorder {
+  border: none;
+  border-color: transparent;
+}
+
+@mixin formControlBase {
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin link {
+  color: $link-text;
+  text-decoration: underline;
+  
+  &:hover {
+    color: $link-text--hover;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+// Mixin for shadow button with block sliding up
+@mixin btn-border-slide($color, $hoverColor, $borderWidth, $time) {
+  $easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+  position: relative;
+
+  display: inline-block;
+  padding: 0.5em 2em;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+
+    height: $borderWidth;
+    width: 100%;
+
+    background-color: $color;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &:focus-within {
+    & > * {
+      & > * {
+        &:before,
+        &:after {
+          transform: translate3d(0, 0, 0);
+        }
+
+        & > * {
+          &:before,
+          &:after {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+      }
+    }
+  }
+
+  & > * {
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+
+      height: 100%;
+      width: $borderWidth;
+
+      background-color: $color;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+
+    & > * {
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        z-index: 9;
+
+        height: $borderWidth;
+        width: 100%;
+
+        background-color: $hoverColor;
+      }
+
+      &:before {
+        top: 0;
+
+        transform: translate3d(-105%, 0, 0);
+        transition: transform $time $easing;
+      }
+
+      &:after {
+        bottom: 0;
+
+        transform: translate3d(105%, 0, 0);
+        transition: transform $time $easing;
+      }
+
+      & > * {
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          z-index: 9;
+
+          height: 100%;
+          width: $borderWidth;
+
+          background-color: $hoverColor;
+        }
+
+        &:before {
+          left: 0;
+
+          transform: translate3d(0, 105%, 0);
+          transition: transform $time $easing;
+        }
+
+        &:after {
+          right: 0;
+
+          transform: translate3d(0, -105%, 0);
+          transition: transform $time $easing;
+        }
+      }
+    }
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+html {
+  font-size: 13px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+input,
+select {
+  font-size: 100%;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  text-transform: uppercase;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.tippy-box {
+  background: #5c5c5c;
+
+  .tippy-content {
+    overflow: hidden;
+  }
+}
+
+.tippy-box[data-placement]>.tippy-arrow:before {
+  border-top-color: #5c5c5c;
+  color: #5c5c5c;
+}
+
+.no-scroll {
+  @include crop;
+}

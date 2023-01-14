@@ -1,0 +1,99 @@
+$pulse-primary-1: #027391;
+$pulse-primary-2: #205374;
+$pulse-secondary-1: #2ab0ae;
+$pulse-secondary-2: #02979b;
+
+$default: #F5F5F5;
+$default-hover: $pulse-primary-1;
+$success: #53a92c;
+$success-hover: #3f8121;
+$warning: #ffc20eb3;
+$danger: #db383b;
+$muted: #999;
+$selected: rgba(102, 198, 191, 0.2);
+$disabled: #fcfcfc;
+$pulse-darkest: #005377;
+$highlightColor: $selected;
+$hover: #e5e5e5;
+$pulse-hover: #ffc20e1a;
+$pulse-selected: #66c6bf33;
+
+$link-text: #00a8a5;
+$link-text--hover: #00739a;
+
+$text-color--default: #333;
+
+$pulse-darkest-green: #02979b;
+$pulse-dark-green: #00a8a5;
+$pulse-green: $pulse-secondary-1;
+$pulse-darkest-blue: #005377;
+$pulse-dark-blue: #00739a;
+$pulse-blue: #00288a;
+
+$tab-default: #444;
+$tab-selected: #565656;
+
+$primary: $pulse-dark-blue;
+$primary-hover: $pulse-darkest-blue;
+
+$secondary: $pulse-green;
+$secondary-hover: $pulse-darkest-green;
+
+$pulse-select-background: #F5F6F7;
+
+$shadow: rgba(0,0,0, 0.36);
+
+$colors:
+    "default" $default $text-color--default,
+    "danger" $danger,
+    "success" $success,
+    "warning" $warning $text-color--default,
+    "disabled" $disabled #666666,
+    "secondary" $secondary,
+    "primary" $primary;
+
+@mixin default {
+    background: $default;
+    background-color: $default;
+    color: #666666;
+}
+@mixin success {
+    background: $success;
+    background-color: $success;
+    color: #FFF;
+}
+@mixin primary {
+    background: $primary;
+    background-color: $primary;
+    color: #FFF;
+}
+@mixin secondary {
+    background: $secondary;
+    background-color: $secondary;
+    color: #FFF;
+}
+@mixin danger {
+    background: $danger;
+    background-color: $danger;
+    color: #FFF;
+}
+
+@mixin disabled {
+    opacity: .4;
+    pointer-events: none;
+}
+
+
+@each $name, $color, $textColor in $colors {
+    .pulse-#{$name} {
+        background: $color;
+        background-color: $color;
+        @if $textColor {
+            color: $textColor;
+            stroke: $textColor;
+        } @else {
+            color: #FFF;
+            stroke: #FFF;
+        }
+    }
+}
